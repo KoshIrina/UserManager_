@@ -1,0 +1,66 @@
+﻿<Window x:Class="UserManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserManager"
+        mc:Ignorable="d"
+       Title="Авторизация" Height="250" Width="450"
+        WindowState="Normal"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </Window.Resources>
+
+
+
+    <StackPanel Style="{StaticResource ResourceKey=Style_StackPanel_Vertical}">
+        <!--Вертикальное расположение стопки-->
+
+        <TextBlock Text="АВТОРИЗАЦИЯ"
+                   Style="{StaticResource ResourceKey=Style_Header}"/>
+
+        <Grid Style="{StaticResource ResourceKey=Style_GridInput}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!--Левая колонка займёт 1/3-->
+                <ColumnDefinition Width="2*"/>
+                <!--Правая колонка займёт 2/3-->
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!--Будет столько занимать места, сколько будет содержимого-->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Content="Логин"
+                   Style="{StaticResource ResourceKey=Style_LabelInput}"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Style="{StaticResource ResourceKey=Style_Input}"/>
+
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   Content="Пароль"
+                   Style="{StaticResource ResourceKey=Style_LabelInput}"/>
+
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Style="{StaticResource ResourceKey=Style_Input}"/>
+
+
+        </Grid>
+
+        <StackPanel Style="{StaticResource ResourceKey=Style_StackPanel_Buttons}">
+            <Button Content="Очистить" 
+                    Style="{StaticResource ResourceKey=Style_ButtonClear}"/>
+            <Button Content="Войти" 
+                    Style="{StaticResource ResourceKey=Style_ButtonAuth}"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
