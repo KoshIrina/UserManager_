@@ -1,7 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
@@ -10,11 +9,6 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.143" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.8" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\UserManager.DbLib\UserManager.DbLib.csproj" />
-    <ProjectReference Include="..\UserManager.Models\UserManager.Models.csproj" />
   </ItemGroup>
 
 </Project>

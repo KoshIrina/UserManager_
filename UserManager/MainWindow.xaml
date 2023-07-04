@@ -19,47 +19,51 @@
     <StackPanel Style="{StaticResource ResourceKey=Style_StackPanel_Vertical}">
         <!--Вертикальное расположение стопки-->
 
-        <TextBlock Text="АВТОРИЗАЦИЯ"
+        <TextBlock x:Name="Header"   
+                   Text="АВТОРИЗАЦИЯ" 
                    Style="{StaticResource ResourceKey=Style_Header}"/>
 
         <Grid Style="{StaticResource ResourceKey=Style_GridInput}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <!--Левая колонка займёт 1/3-->
-                <ColumnDefinition Width="2*"/>
-                <!--Правая колонка займёт 2/3-->
+                <ColumnDefinition Width="*"/>  <!--Левая колонка займёт 1/3-->
+                <ColumnDefinition Width="2*"/>  <!--Правая колонка займёт 2/3-->
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <!--Будет столько занимать места, сколько будет содержимого-->
+                <RowDefinition Height="Auto"/> <!--Будет столько занимать места, сколько будет содержимого-->
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
 
             <Label Grid.Row="0" Grid.Column="0"
+                   x:Name="Label_Login"
                    Content="Логин"
                    Style="{StaticResource ResourceKey=Style_LabelInput}"/>
 
             <TextBox Grid.Row="0" Grid.Column="1"
+                     x:Name="Input_Login"
                      Style="{StaticResource ResourceKey=Style_Input}"/>
 
 
             <Label Grid.Row="1" Grid.Column="0"
+                   x:Name="Label_Password"
                    Content="Пароль"
                    Style="{StaticResource ResourceKey=Style_LabelInput}"/>
 
             <TextBox Grid.Row="1" Grid.Column="1"
+                     x:Name="Input_Password"
                      Style="{StaticResource ResourceKey=Style_Input}"/>
-
-
         </Grid>
 
         <StackPanel Style="{StaticResource ResourceKey=Style_StackPanel_Buttons}">
-            <Button Content="Очистить" 
-                    Style="{StaticResource ResourceKey=Style_ButtonClear}"/>
-            <Button Content="Войти" 
-                    Style="{StaticResource ResourceKey=Style_ButtonAuth}"/>
+            <Button x:Name="Button_Clear"
+                Content="Очистить" 
+                    Style="{StaticResource ResourceKey=Style_ButtonClear}"
+                    Click="Button_Clear_Click"/>
+            <Button x:Name="Button_Auth"
+                Content="Войти" 
+                    Style="{StaticResource ResourceKey=Style_ButtonAuth}"
+                    Click="Button_Auth_Click"/>
         </StackPanel>
 
     </StackPanel>
